@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+  }
+  
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template:
+        "servers header header header" 50px
+        "servers channels feed users" 1fr /
+        70px 250px minmax(350px, 1fr) 250px;
+}
+
+.container > div {
+    display: grid;
+    place-items: center;
+}
+.servers {
+    grid-area: servers;
+    background-color: #ff000070;
+}
+
+.header {
+    grid-area: header;
+    background-color: #ffcc0070;
+}
+
+.channels {
+    grid-area: channels;
+    background-color: #00ff0070;
+}
+
+.feed {
+    grid-area: feed;
+    background-color: #00eeff70;
+}
+
+.users {
+    grid-area: users;
+    background-color: #ff00ff70;
+}

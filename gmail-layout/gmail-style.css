@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+  }
+  
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template:
+        "header header header header" 70px
+        "mailboxes inbox settings taskbar" 1fr
+        "socials inbox settings taskbar" 1fr /
+        200px minmax(350px, 1fr) 250px  50px;
+}
+
+.container > div {
+    display: grid;
+    place-items: center;
+    border: solid 1px black;
+}
+
+.header {
+    grid-area: header;
+    background-color: #ffcc0070;
+}
+.mailboxes {
+    grid-area: mailboxes;
+    background-color: #00ffc870;
+}
+.socials {
+    grid-area: socials;
+    background-color: #ff480070;
+}
+.inbox {
+    grid-area: inbox;
+    background-color: #ff00ea70;
+}
+.settings {
+    grid-area: settings;
+    background-color: #0077ff70;
+}
+.taskbar {
+    grid-area: taskbar;
+    background-color: #15ff0070;
+}

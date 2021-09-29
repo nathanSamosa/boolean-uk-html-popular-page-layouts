@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+  
+    display: grid;
+  
+    grid-template:
+      "header header header" 50px
+      "left-menu main right-menu" 1fr
+      "footer footer footer" 50px /
+      300px 1fr 300px;
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #ffcc0070;
+  }
+  
+  .left-menu {
+    grid-area: left-menu;
+    background-color: #ff000070;
+  
+    display: grid;
+    grid-auto-rows: 300px;
+  }
+  .left-menu > div {
+    display: grid;
+    border: solid 1px black;
+    place-items: center;
+    margin: 5px;
+  }
+  
+  .main {
+    grid-area: main;
+    background-color: #00ff0070;
+  
+    display: grid;
+    grid-auto-rows: 250px;
+    grid-template:
+    "forum" 200px
+    "feed" 1fr;
+  }
+  .main > div {
+    display: grid;
+    border: solid 1px black;
+    place-items: center;
+    margin: 5px;
+  }
+  
+  .right-menu {
+    grid-area: right-menu;
+    background-color: #ff00ff70;
+  
+    display: grid;
+    grid-auto-rows: 300px;
+  }
+  .right-menu > div {
+    display: grid;
+    border: solid 1px black;
+    place-items: center;
+    margin: 5px;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #00aaff70;
+  }
+  
